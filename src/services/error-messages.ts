@@ -1,6 +1,6 @@
-import {Component, Input} from "@angular/core";
-import {FormControl, FormGroup} from "@angular/forms";
-import {CustomValidators} from "./custom-validators";
+import { Component, Input } from "@angular/core";
+import { FormControl, FormGroup } from "@angular/forms";
+import { CustomValidators } from "./custom-validators";
 
 @Component({
   selector: 'error-messages',

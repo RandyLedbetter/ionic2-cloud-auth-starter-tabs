@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Settings</ion-title>
+    <ion-buttons end>
+      <button (click)="signout()" ion-button clear>Sign Out</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail class="user-avatar-thumbnail" item-left>
+        <img src="{{user.details.image}}">
+      </ion-thumbnail>
+      <h2>{{user.details.name}}</h2>
+      <p>
+        {{user.details.username}}
+      </p>
+      <p>
+        {{user.details.email}}
+      </p>
+      <p *ngIf="birthdate">
+        {{ birthdate | amDateFormat:'MMMM' }}
+        {{ birthdate | amDateFormat:'D' }},
+        {{ birthdate | amDateFormat: 'YYYY' }}
+      </p>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item-divider color="dark">User Details
+      <ion-icon name="person" item-right></ion-icon>
+    </ion-item-divider>
+    <ion-item>
+      Name: <span class="disabled">{{user.details.name || "Not Set"}}</span>
+    </ion-item>
+    <ion-item>
+      Username: <span class="disabled">{{user.details.username || "Not Set"}}</span>
+    </ion-item>
+    <ion-item>
+      Email: <span class="disabled">{{user.details.email}}</span>
+    </ion-item>
+    <ion-item no-lines>
+      Birthdate:
+      <span *ngIf="birthdate" class="disabled">
+        {{ birthdate | amDateFormat:'MMMM' }} {{ birthdate | amDateFormat:'D' }}, {{ birthdate | amDateFormat: 'YYYY' }}
+      </span>
+      <span *ngIf="!birthdate" class="disabled">
+        Not Set
+      </span>
+    </ion-item>
+
+    <ion-item hidden="true">
+      <ion-datetime #datePicker
+                    text-center
+                    (ionChange)="dateChanged($event)"
+                    pickerFormat="MMMM D YYYY"
+                    displayFormat="MMMM D"
+                    [(ngModel)]="date"></ion-datetime>
+    </ion-item>
+    <ion-item class="ion-item-action-button">
+      <button (click)="editUserDetails()" ion-button item-right clear>Edit User Details</button>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item-divider color="dark">Security
+      <ion-icon name="lock" item-right></ion-icon>
+    </ion-item-divider>
+    <ion-item>
+      Password: <span class="disabled">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</span>
+      <button (click)="changePassword()" ion-button item-right clear>Change Password</button>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item-divider color="danger">Danger Zone
+      <ion-icon name="warning" item-right></ion-icon>
+    </ion-item-divider>
+    <ion-item>
+      <button (click)="confirmDeleteAccount()" ion-button item-right clear color="danger">Delete Account</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,15 @@
+settings-page {
+  ion-thumbnail.user-avatar-thumbnail img {
+    width: initial;
+    height: initial;
+  }
+  .disabled {
+    color: #888;
+  }
+  .item-block:first-child {
+    border-top: none !important;
+  }
+  .item-block:last-child {
+    border-bottom: none !important;
+  }
+}

@@ -12,10 +12,14 @@ import { LoginPage } from "../pages/login/login";
 import { SignupPage } from "../pages/signup/signup";
 import { ForgotPasswordPage } from "../pages/forgot-password/forgot-password";
 import { ConfirmPasswordResetPage } from "../pages/confirm-password-reset/confirm-password-reset";
+import { SettingsPage } from "../pages/settings/settings";
+import { EditUserDetailsPage } from "../pages/edit-user-details/edit-user-details";
+import { ChangePasswordPage } from "../pages/change-password/change-password";
 import { CloudSettings, CloudModule } from "@ionic/cloud-angular";
 import { UserAuth } from "../services/user-auth";
 import { ErrorMessages } from "../services/error-messages";
 import { CustomValidators } from "../services/custom-validators";
+import { MomentModule } from "angular2-moment";
 
 const cloudSettings: CloudSettings = {
   'core': {
@@ -34,6 +38,9 @@ const cloudSettings: CloudSettings = {
     SignupPage,
     ForgotPasswordPage,
     ConfirmPasswordResetPage,
+    SettingsPage,
+    EditUserDetailsPage,
+    ChangePasswordPage,
     ErrorMessages
   ],
   imports: [
@@ -41,7 +48,8 @@ const cloudSettings: CloudSettings = {
     CloudModule.forRoot(cloudSettings),
     FormsModule,
     ReactiveFormsModule,
-    BrowserModule
+    BrowserModule,
+    MomentModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -54,6 +62,9 @@ const cloudSettings: CloudSettings = {
     SignupPage,
     ForgotPasswordPage,
     ConfirmPasswordResetPage,
+    SettingsPage,
+    EditUserDetailsPage,
+    ChangePasswordPage
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
