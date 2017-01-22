@@ -21,8 +21,8 @@ export class SignupPage {
   email: AbstractControl;
   password: AbstractControl;
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController,
-              public userAuthService: UserAuth, public fb: FormBuilder) {
+  constructor(private navCtrl: NavController, private alertCtrl: AlertController,
+              private userAuthService: UserAuth, private fb: FormBuilder) {
     this.signupForm = fb.group({
       'firstName': [
         '',

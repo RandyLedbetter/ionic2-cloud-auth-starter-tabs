@@ -20,8 +20,8 @@ export class LoginPage {
   email: AbstractControl;
   password: AbstractControl;
 
-  constructor(public navCtrl: NavController, public userAuthService: UserAuth,
-              public fb: FormBuilder, public alertCtrl: AlertController) {
+  constructor(private navCtrl: NavController, private userAuthService: UserAuth,
+              private fb: FormBuilder, private alertCtrl: AlertController) {
     this.signupPage = SignupPage;
     this.forgotPasswordPage = ForgotPasswordPage;
 

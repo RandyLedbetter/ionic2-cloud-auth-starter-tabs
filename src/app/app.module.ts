@@ -19,7 +19,7 @@ import { CustomValidators } from "../services/custom-validators";
 
 const cloudSettings: CloudSettings = {
   'core': {
-    'app_id': '246eb686'
+    'app_id': '<YOUR_IONIC_APP_ID>'
   }
 }
 

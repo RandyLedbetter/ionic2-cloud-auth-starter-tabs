@@ -18,8 +18,8 @@ export class ConfirmPasswordResetPage {
   resetCode: AbstractControl;
   password: AbstractControl;
 
-  constructor(public navCtrl: NavController, public userAuthService: UserAuth, public fb: FormBuilder,
-              public alertCtrl: AlertController, public params: NavParams) {
+  constructor(private navCtrl: NavController, private userAuthService: UserAuth, private fb: FormBuilder,
+              private alertCtrl: AlertController, private params: NavParams) {
     this.loginPage = LoginPage;
     this.email = this.params.get('email');
 
