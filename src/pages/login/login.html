@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col no-padding>
+        <ion-list>
+          <img src="assets/images/icon.png" class="form-image">
+          <form [formGroup]="loginForm" (ngSubmit)="signin(loginForm.value)">
+            <ion-row>
+              <ion-col no-padding>
+                <ion-item>
+                  <ion-label for="email" floating>email</ion-label>
+                  <ion-input type="email" id="email" formControlName="email"></ion-input>
+                </ion-item>
+                <error-messages [control]="email"></error-messages>
+                <ion-item>
+                  <ion-label for="password" floating>password</ion-label>
+                  <ion-input type="password" id="password" formControlName="password"></ion-input>
+                </ion-item>
+                <error-messages [control]="password"></error-messages>
+                <br/>
+                <button ion-button block type="submit" [disabled]="!loginForm.valid">Log In</button>
+                <div class="form-links">
+                  <button [navPush]="signupPage" ion-button clear>Sign Up</button>
+                  <button [navPush]="forgotPasswordPage" ion-button clear>Forgot Password?</button>
+                </div>
+              </ion-col>
+            </ion-row>
+          </form>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

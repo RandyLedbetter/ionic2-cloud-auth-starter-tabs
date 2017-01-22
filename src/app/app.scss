@@ -1,6 +1,5 @@
 // http://ionicframework.com/docs/v2/theming/
 
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,3 +13,44 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+@import "../theme/variables";
+
+.form-image {
+  margin: 0 auto;
+  width: 40% !important;
+  height: auto;
+  display: block;
+}
+
+.form-instructions {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #222;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.form-links {
+  text-align: center;
+}
+
+.form-links a {
+  text-decoration: none;
+  outline: none;
+}
+
+.custom-error-message {
+  font-size: 0.8em;
+  color: red !important;
+}
+
+.ion-item-action-button .item-inner {
+  border-top: 1px solid #dedede;
+}
+.form-platform-icon {
+  font-size: 36vw;
+  color: map-get($colors, primary);
+  display: block;
+  text-align: center;
+}
