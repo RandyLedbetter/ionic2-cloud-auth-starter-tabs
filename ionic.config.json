@@ -1,6 +1,6 @@
 {
-  "name": "ionic2-cloud-auth-starter-tabs",
-  "app_id": "246eb686",
+  "name": "YOUR_IONIC_APP_NAME",
+  "app_id": "YOUR_IONIC_APP_ID",
   "v2": true,
   "typescript": true
 }

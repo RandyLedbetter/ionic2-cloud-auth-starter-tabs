@@ -23,7 +23,7 @@ import { MomentModule } from "angular2-moment";
 
 const cloudSettings: CloudSettings = {
   'core': {
-    'app_id': '246eb686'
+    'app_id': 'YOUR_IONIC_APP_ID'
   }
 }
 
