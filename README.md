@@ -21,7 +21,7 @@ https://github.com/RandyLedbetter/ionic2-cloud-auth-starter-tabs.
 
 ## App Preview
 You can view a live demo of this app on iOS and Android mobile devices by downloading the [Ionic View App](http://view.ionic.io) for your desired platform and entering the following code:
-**6297f14a**
+**02fe48e7**
 
 ##### Sneak Peek
 ![](http://i.imgur.com/IiZPVzk.png)
